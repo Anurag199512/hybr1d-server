@@ -2,12 +2,12 @@ const express = require('express');
 const passport = require('passport');
 
 // import controller
-const getSellersCatalog = require('../../../controller/User/Buyer/getSellersCatalog');
+const order = require('../../../controller/User/Buyer/order');
 const defaultMessage = require('../../../defaultMessage');
 
 const Router = express.Router();
 
-Router.get('/api/buyer/seller-catalog/:seller_id', passport.authenticate('jwt', { session: false }), (req, res) => {
+Router.post('/api/buyer/create-order/:seller_id', passport.authenticate('jwt', { session: false }), (req, res) => {
   if (req.user.type !== 'buyer') {
     res.send({ success: false, error: defaultMessage.incorrectUserType });
   }
@@ -16,7 +16,7 @@ Router.get('/api/buyer/seller-catalog/:seller_id', passport.authenticate('jwt', 
     res.send({ success: false, error: defaultMessage.sellerIdMissing });
   }
 
-  getSellersCatalog(req.params.seller_id, res);
+  return order(req, res, req.params.seller_id);
 });
 
 module.exports = Router;
