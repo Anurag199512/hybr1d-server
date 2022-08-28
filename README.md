@@ -1,1 +1,1 @@
-# hybr1d-server
+# Hybr1d assignment - Backend (Node.js)
