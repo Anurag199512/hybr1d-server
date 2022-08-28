@@ -44,7 +44,8 @@ async function orderProduct(request, response, sellerId) {
 
     await Order.create({
       userId: request.user.user_id,
-      products: productIds
+      products: productIds,
+      sellerId
     })
 
     await transaction.commit()
