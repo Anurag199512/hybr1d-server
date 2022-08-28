@@ -22,7 +22,10 @@ async function listProductOrders(sellerId, response) {
       }
     });
 
-    result.push(...products);
+    result.push({
+      orderId: order.id,
+      products
+    });
   }
 
   response.send({ success: true, orders: result })
