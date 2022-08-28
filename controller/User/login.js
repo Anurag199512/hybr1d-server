@@ -34,7 +34,7 @@ function userLogin(request, response) {
 
     bcrypt.compare(request.body.password, userData.password).then(async (data) => {
       if (data) {
-        const accessToken = jwt.sign({ email: request.body.email, user_id: userData.id },
+        const accessToken = jwt.sign({ email: request.body.email, user_id: userData.id, type: userData.userType },
           process.env.SECRET_KEY, { expiresIn: '14d' });
 
         const userDetail = await findUserDetails(request.body.email);
