@@ -9,7 +9,7 @@ async function findUser(email) {
       where: { email: email }
     });
 
-    return details
+    return details;
   } catch (e) {
     return false;
   }

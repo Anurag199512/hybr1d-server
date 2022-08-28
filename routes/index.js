@@ -9,7 +9,6 @@ const listSeller = require('./User/Buyer/listSeller');
 const buildCatalog = require('./User/Seller/buildCatalog');
 const fetchSellersCatalog = require('./User/Buyer/fetchSellersCatalog');
 
-
 const apiRoutes = Router.use('/api/v1/register', register)
   .use('/api/v1/login', login)
   .use('/api/v1/list-seller', listSeller)

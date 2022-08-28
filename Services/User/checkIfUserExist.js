@@ -10,7 +10,7 @@ async function checkIfUserExist(emailId) {
       userPresent = true;
     }
   } catch (e) {
-    throw new Error(e)
+    throw new Error(e);
   }
 
   return userPresent;

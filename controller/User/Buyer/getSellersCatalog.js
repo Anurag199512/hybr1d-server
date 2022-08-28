@@ -11,7 +11,7 @@ async function getSellersCatalog(sellerId, response) {
   });
 
   if (!catalogDetail) {
-    return response.send({ success: true, message:'Seller has not created any catalog' });
+    return response.send({ success: true, message: 'Seller has not created any catalog' });
   }
 
   return Product.findAll({

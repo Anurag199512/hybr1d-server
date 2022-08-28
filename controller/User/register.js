@@ -39,7 +39,7 @@ async function userRegistration(request, response) {
       // successful registration
   
       const user = await findUserDetail(request.body.email);
-      const accessToken = jwt.sign({ email: request.body.firstName, user_id: user.id, type: user.userType  },
+      const accessToken = jwt.sign({ email: request.body.firstName, user_id: user.id, type: user.userType },
         process.env.SECRET_KEY, { expiresIn: '14d' });
   
       if (user) {
