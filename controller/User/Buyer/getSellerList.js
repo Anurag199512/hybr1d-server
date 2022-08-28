@@ -1,4 +1,4 @@
-const { User } = require('../../models');
+const { User } = require('../../../models');
 
 async function getSellerList(response) {
   return User.findAll({

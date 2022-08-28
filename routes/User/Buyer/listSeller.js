@@ -2,8 +2,8 @@ const express = require('express');
 const passport = require('passport')
 
 // import controller
-const getSellerList = require('../../controller/User/getSellerList');
-const defaultMessage = require('../../defaultMessage');
+const getSellerList = require('../../../controller/User/Buyer/getSellerList');
+const defaultMessage = require('../../../defaultMessage');
 
 const Router = express.Router();
 
