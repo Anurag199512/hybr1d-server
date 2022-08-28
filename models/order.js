@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER
     },
     userId: DataTypes.INTEGER,
-    products: Sequelize.DATATYPES.JSON
+    products: DataTypes.JSON
   }, {
     freezeTableName: true,
     timestamps: true

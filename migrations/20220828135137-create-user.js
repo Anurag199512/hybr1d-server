@@ -21,7 +21,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       userType: {
-        type: Sequelize.ENUM('buyer', 'seller'),
+        type: Sequelize.ENUM('buyer', 'seller')
       },
       createdAt: {
         allowNull: false,
