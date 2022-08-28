@@ -7,12 +7,12 @@ const defaultMessage = require('../../../defaultMessage');
 
 const Router = express.Router();
 
-Router.get('/', passport.authenticate('jwt', { session: false }), (req, res) => {
+Router.get('/api/buyer/seller-catalog/:seller_id', passport.authenticate('jwt', { session: false }), (req, res) => {
   if (req.user.type !== 'buyer') {
     res.send({ success: false, error: defaultMessage.incorrectUserType});
   }
 
-  getSellersCatalog(req.query.sellerId, res);
+  getSellersCatalog(req.params.seller_id, res);
 });
 
 module.exports = Router;
