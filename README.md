@@ -12,3 +12,24 @@
     DATABASE_CONNECTION_URL= /* database URI */
     SECRET_KEY= /* Secret KEY for hashing*/
 ```
+
+## Setup Local Database
+
+1. Added above mentioned details in .env file (in the root dir of the proj).
+2. Install all the dependencies using
+
+        npm i
+
+3. To initialize database we can run migrations:
+
+        npx sequelize db:migrate
+
+4. Import the below postman link to view the sample example saved for each API.
+
+        https://www.getpostman.com/collections/96416cce7a51bbdd0890
+
+
+## Project details:
+
+1. Have setup input validations using joi.
+2. Sequelize ORM is used for migration and making database operations.
