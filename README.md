@@ -1,6 +1,5 @@
 # Hybr1d assignment - Backend (Node.js)
 
-
 ## Content of .env file
 
 ```

@@ -17,6 +17,6 @@ const apiRoutes = Router.use('/api/auth/register', register)
   .use('/api/seller/create-catalog', buildCatalog)
   .use('/', fetchSellersCatalog)
   .use('/', orderProducts)
-  .use('/api/seller/orders', checkOrderList)
+  .use('/api/seller/orders', checkOrderList);
 
 module.exports = apiRoutes;

@@ -46,9 +46,9 @@ async function orderProduct(request, response, sellerId) {
       userId: request.user.user_id,
       products: productIds,
       sellerId
-    })
+    });
 
-    await transaction.commit()
+    await transaction.commit();
 
     return response.send({ success: true, message: defaultMessage.orderPlaced });
   } catch (e) {

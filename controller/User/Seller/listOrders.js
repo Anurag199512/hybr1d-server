@@ -11,7 +11,6 @@ async function listProductOrders(sellerId, response) {
     }
   });
 
-
   for (const order of orders) {
     const products = await Product.findAll({
       attributes: ['id', 'name', 'price'],
@@ -28,7 +27,7 @@ async function listProductOrders(sellerId, response) {
     });
   }
 
-  response.send({ success: true, orders: result })
+  response.send({ success: true, orders: result });
 }
 
 module.exports = listProductOrders;
