@@ -32,3 +32,4 @@
 
 1. Have setup input validations using joi.
 2. Sequelize ORM is used for migration and making database operations.
+3. Database used = `MYSQL`
