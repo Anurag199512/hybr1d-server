@@ -13,6 +13,7 @@ async function orderProduct(request, response, sellerId) {
   if (error) {
     return response.status(400).send({ success: false, error: error.details[0].message });
   }
+
   const transaction = await db.sequelize.transaction();
 
   try {

@@ -1,5 +1,6 @@
 const joi = require('@hapi/joi');
 const jwt = require('jsonwebtoken');
+const defaultMessage = require('../../defaultMessage');
 
 // default response messages
 const responseMessage = require('../../defaultMessage');
@@ -54,7 +55,7 @@ async function userRegistration(request, response) {
   
       return response.status(500).send({
         success: false,
-        error: 'Internal server error'
+        error: defaultMessage.internalServerError
       });
     }
 
